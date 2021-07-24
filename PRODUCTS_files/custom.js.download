@@ -1,4 +1,4 @@
-jQuery(function() {
+jQuery(function($) {
 
     // Fixed nav
     $.fn.checkHeaderPositioning = function(scrollEl, scrollClass) {
@@ -147,7 +147,7 @@ jQuery(function() {
     _attachEvents: function() {
       var base = this;
 
-        $('.hamburger').on('click', function() {
+        $('.hamburger').on('click', function(e) {
             e.preventDefault();
             if (!$('body').hasClass('nav-open')) {
                 $('body').addClass('nav-open');

@@ -31,12 +31,12 @@
   <link rel="stylesheet" type="text/css" href="./Home_files/fancybox.css">
   <link rel="stylesheet" type="text/css" href="./Home_files/social-icons.css" media="screen,projection">
   <link rel="stylesheet" type="text/css" href="./Home_files/main_style.css" title="wsite-theme-css">
-  <link href="./Home_files/css" rel="stylesheet" type="text/css">
+  <link href="./Home_files/css.css" rel="stylesheet" type="text/css">
 
-  <link href="./Home_files/css(1)" rel="stylesheet" type="text/css">
-  <link href="./Home_files/css(1)" rel="stylesheet" type="text/css">
-  <link href="./Home_files/css" rel="stylesheet" type="text/css">
-  <link href="./Home_files/css(1)" rel="stylesheet" type="text/css">
+  <link href="./Home_files/css(1).css" rel="stylesheet" type="text/css">
+  <link href="./Home_files/css(1).css" rel="stylesheet" type="text/css">
+  <link href="./Home_files/css.css" rel="stylesheet" type="text/css">
+  <link href="./Home_files/css(1).css" rel="stylesheet" type="text/css">
   <style type="text/css">
     .wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph,
     .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p,
@@ -282,7 +282,7 @@
   <script src="./Home_files/snowday262.js.download"></script>
   <script type="text/javascript" src="./Home_files/ga.js.download"></script>
   <script type="text/javascript" src="./Home_files/float.ls"></script>
-  <script type="text/javascript" id="zb-embed-code" src="./Home_files/widgets.js.download"></script>
+  <script type="text/javascript" id="zb-embed-code" src="./Home_files/widgets.js"></script>
   <script id="facebook-jssdk" src="./Home_files/sdk.js(1).download"></script>
   <script src="./Home_files/templateArtifacts.js.download"></script>
   <script>
@@ -291,10 +291,20 @@
     var STYLE_PREFIX = 'wsite';
   </script>
   <script src="./Home_files/jquery.min.js.download"></script>
+  <script>
+    $('.hamburger').on('click', function(e) {
+            e.preventDefault();
+            if (!$('body').hasClass('nav-open')) {
+                $('body').addClass('nav-open');
+            } else {
+                $('body').removeClass('nav-open');
+            }
+        });
+  </script>
 
   <script type="text/javascript" src="./Home_files/stl.js.download"></script>
   <script src="./Home_files/main.js.download"></script>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     function initCustomerAccountsModels() {
       (function () {
         _W.setup_rpc({
@@ -385,7 +395,7 @@
     } else if (document.documentElement.initCustomerAccountsModels === 0) {
       document.documentElement.initCustomerAccountsModels++
     }
-  </script>
+  </script> -->
   <script type="text/javascript">
     _W = _W || {};
     _W.securePrefix = 'www.toolshardwarejamaica.com';
@@ -2778,7 +2788,8 @@
     -->
   </script>
   <script src="./Home_files/jquery.min.js(1).download"></script>
-  <script src="./Home_files/nivoslider.js.download"></script>
+  <!-- <script src="./Home_files/nivoslider.js.download"></script> -->
+  <script src="./Home_files/jquery.nivo.slider.js"></script>
 
   <script>
     jQuery(window).load(function () {
@@ -3097,14 +3108,14 @@
       cursor: pointer
     }
   </style>
-  <script type="text/javascript" charset="utf-8" data-requirecontext="_"
-    data-requiremodule="//static.zbcdn3.net/__ksdzjya/asset/bundle.js" src="./Home_files/bundle.js.download"></script>
-  <script type="text/javascript" charset="utf-8" data-requirecontext="_"
+  <!-- <script type="text/javascript" charset="utf-8" data-requirecontext="_"
+    data-requiremodule="//static.zbcdn3.net/__ksdzjya/asset/bundle.js" src="./Home_files/bundle.js.download"></script> -->
+  <!-- <script type="text/javascript" charset="utf-8" data-requirecontext="_"
     data-requiremodule="//static.zbcdn3.net/9/c/9c5d673cde8c68dd9cf991fd43c28a45/data.js?1626169688759"
-    src="./Home_files/data.js.download"></script>
-  <script type="text/javascript" charset="utf-8" data-requirecontext="_"
+    src="./Home_files/data.js.download"></script> -->
+  <!-- <script type="text/javascript" charset="utf-8" data-requirecontext="_"
     data-requiremodule="//static.zbcdn3.net/__ksdzjya/social_tab/default.js" src="./Home_files/default.js.download">
-  </script>
+  </script> -->
   <style id="wzb-base-css" type="text/css" media="screen">
     body [data-wzb] iframe[src="about:blank"] {
       display: block;
@@ -5838,7 +5849,7 @@
 </head>
 
 <body
-  class="header-page  wsite-page-index  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light fade-in">
+  class="header-page  wsite-page-index  full-width-body-off header-overlay-on alt-nav-off  wsite-theme-light fade-in" id='body'>
   <div class="wrapper">
     <div class="birdseye-header">
       <div class="nav-wrap">
@@ -5855,13 +5866,13 @@
           <div class="nav desktop-nav">
             <ul class="wsite-menu-default">
               <li id="active" class="wsite-menu-item-wrap  wsite-nav-1" style="position: relative;">
-                <a href="http://www.toolshardwarejamaica.com/" class="wsite-menu-item" style="position: relative;">
+                <a href="#" class="wsite-menu-item" style="position: relative;">
                   Home
                 </a>
 
               </li>
               <li id="pg600528559798074904" class="wsite-menu-item-wrap  wsite-nav-2" style="position: relative;">
-                <a href="http://www.toolshardwarejamaica.com/products.html" class="wsite-menu-item"
+                <a href="#" class="wsite-menu-item"
                   style="position: relative;">
                   PRODUCTS
                 </a>
@@ -5869,58 +5880,127 @@
 
               </li>
               <li id="pg585784647828223808" class="wsite-menu-item-wrap  wsite-nav-3" style="position: relative;">
-                <a href="http://www.toolshardwarejamaica.com/ideas.html" class="wsite-menu-item"
+                <a href="#" class="wsite-menu-item"
                   style="position: relative;">
                   IDEAS
                 </a>
 
               </li>
               <li id="pg564294142338551983" class="wsite-menu-item-wrap  wsite-nav-4" style="position: relative;">
-                <a href="http://www.toolshardwarejamaica.com/specials.html" class="wsite-menu-item"
+                <a href="#" class="wsite-menu-item"
                   style="position: relative;">
                   SPECIALS
                 </a>
 
               </li>
               <li id="pg367558928427006532" class="wsite-menu-item-wrap  wsite-nav-5" style="position: relative;">
-                <a href="http://www.toolshardwarejamaica.com/contact-us.html" class="wsite-menu-item"
+                <a href="#" class="wsite-menu-item"
                   style="position: relative;">
                   CONTACT US
                 </a>
 
               </li>
               <li id="pg823949897596664847" class="wsite-menu-item-wrap  wsite-nav-6" style="position: relative;">
-                <a href="http://www.toolshardwarejamaica.com/category.html" class="wsite-menu-item"
+                <a href="#" class="wsite-menu-item"
                   style="position: relative;">
                   Category
                 </a>
 
               </li>
               <li class="wsite-menu-item-wrap wsite-nav-cart wsite-nav-7" style="position: relative;">
-                <a href="http://www.toolshardwarejamaica.com/#" class="wsite-menu-item" id="wsite-nav-cart-a"
+                <a href="#" class="wsite-menu-item" id="wsite-nav-cart-a"
                   style="position: relative;">
                   Cart <span id="wsite-nav-cart-num">0</span>
                 </a>
               </li>
             </ul>
           </div>
-          <a class="hamburger" aria-label="Menu" href="http://www.toolshardwarejamaica.com/#"><span></span></a>
+          <a class="hamburger" aria-label="Menu" onclick="openNav()"><span></span>
+
+            
+
+          </a>
         </div>
       </div>
     </div>
+
+    <style>
+      
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      </style>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="#" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("body").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("body").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+      }
+      </script>
 
     <div class="banner-wrap">
       <div class="wsite-elements wsite-not-footer wsite-header-elements">
         <div class="wsite-section-wrap">
           <div class="wsite-section wsite-header-section wsite-section-bg-image wsite-section-effect-reveal"
-            style="vertical-align: middle;height: 450px;background-image: url(&quot;/uploads/7/9/9/0/7990448/background-images/2113808168.jpg&quot;) ;background-repeat: no-repeat ;background-position: 50.00% 74.89% ;background-size: 100% ;background-color: transparent ;background-size: cover;">
+            style="vertical-align: middle;height: 450px;background-image: url(./img/2113808168.jpg) ;background-repeat: no-repeat ;background-position: 50.00% 74.89% ;background-size: 100% ;background-color: transparent ;background-size: cover;">
             <div class="wsite-section-content">
 
               <div class="container">
                 <div class="banner">
                   <div class="wsite-section-elements">
                     <div class="" data-sr-id="2"
-                      style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; transition: transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; ">
+                      style="visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; transition: transform 0.7s ease-in 0.8s, opacity 0.7s ease-in 0.8s; ">
                       <div class="wsite-image wsite-image-border-none "
                         style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:inherit">
                         <a>
@@ -6324,7 +6404,7 @@
                   z.async = true;
                   z.src = "//static.zotabox.com/9/c/9c5d673cde8c68dd9cf991fd43c28a45/widgets.js";
                   var sz = d.getElementsByTagName(s)[0];
-                  sz.parentNode.insertBefore(z, sz)
+                  //sz.parentNode.insertBefore(z, sz)
                 }(document, "script", "zb-embed-code"));
               </script>
             </div>
@@ -6338,7 +6418,7 @@
   </div><!-- /.wrapper -->
 
   <div id="navMobile" class="nav mobile-nav">
-    <a class="hamburger" aria-label="Menu" href="http://www.toolshardwarejamaica.com/#"><span></span></a>
+    <a class="" aria-label="Menu" href="http://www.toolshardwarejamaica.com/#"><span></span></a>
     <ul class="wsite-menu-default">
       <li id="active" class="wsite-menu-item-wrap">
         <a href="http://www.toolshardwarejamaica.com/" class="wsite-menu-item">
@@ -6615,9 +6695,7 @@
   <script type="text/javascript" src="./Home_files/plugins.js.download"></script>
   <script type="text/javascript" src="./Home_files/custom.js.download"></script>
   <div id="customer-accounts-app"></div>
-  <script src="./Home_files/main-customer-accounts-site.js.download"></script>
-
-  jamaica, tiles, hardware, tools, ceramic tiles, porcelain tiles,
+  <!-- <script src="./Home_files/main-customer-accounts-site.js.download"></script> -->
 
 
 
@@ -6675,7 +6753,7 @@
         n.src = w;
         g.parentNode.insertBefore(n, g)
       }
-    }(window, document, 'script', '//cdn2.editmysite.com/js/wsnbn/snowday262.js', 'snowday'));
+    }(window, document, 'script', './scripts/snowday262.js', 'snowday'));
 
     var r = [99, 104, 101, 99, 107, 111, 117, 116, 46, 40, 119, 101, 101, 98, 108, 121, 124, 101, 100, 105, 116, 109,
       121, 115, 105, 116, 101, 41, 46, 99, 111, 109
@@ -6747,9 +6825,9 @@
 
 
   <!-- Stripe Tag -->
-  <script src="./Home_files/saved_resource"></script>
+  <script src="./Home_files/saved_resource.js"></script>
   <script>
-    var stripe = Stripe('pk_live_IHsrwy46hOfqWXBtsFfDrigr');
+    var stripe = Stripe('');
   </script><iframe name="__privateStripeController2571" frameborder="0" allowtransparency="true" scrolling="no"
     allow="payment *" src="./Home_files/controller-56a797504b7ec75ebb641ab447415239.html" aria-hidden="true"
     tabindex="-1"
@@ -7098,7 +7176,7 @@
     <div id="zlscht" class="zls-prelative"><em class="zls-minmximg" id="zlscloseimg"
         onclick="Float.closeChat(true)"></em><iframe seamless="" src="./Home_files/drawchat.html" height="417"
         width="100%" id="zlsiframe" style="visibility: visible; overflow: hidden;"
-        onload="setTimeout(function(){Float.showIframe(document.getElementById(&#39;zlsiframe&#39;),&#39;onload&#39;)},50);"
+        onload="setTimeout(function(){Float.showIframe(document.getElementById(zlsiframe),onload)},50);"
         frameborder="0" scrolling="no"></iframe></div>
   </div>
   <div class="zls-small zls-btnmn zls-btrht " style="display: block;">
