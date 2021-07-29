@@ -54,6 +54,7 @@ function addItemToCart(choice)
     localStorage.setItem("allItems", JSON.stringify(existingItems));
     //var stringified = JSON.stringify(item);
     //localStorage.setItem(totalCart, stringified);
+    location.reload();
 
 }
 
@@ -61,20 +62,30 @@ function getCart()
 {
     var items = localStorage.getItem("allItems");
     var items = JSON.parse(items);
+    var total_price = 0;
+
 
     for(var i = 0; i < items.length; i++)
     {
         var obj = items[i];
         console.log(obj.name);
         console.log(obj.price);
+
+        total_price = total_price + obj.price;
+        console.log(total_price);
+
         $('#cartContent').append('<a href="#" class="cart_item">' + " - " + obj.name + '<br>$' + obj.price + '</a>');
     }
+
+    $('#cart_total').append('<div href="#" class="">' + "Total: $" + total_price + '.00</div>');
+
 
 }
 
 function clearCart()
 {
     localStorage.clear();
+    location.reload();
 }
 
 //end custom

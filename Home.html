@@ -5843,7 +5843,7 @@
     }
   </style>
   <link rel="stylesheet" href="./Home_files/floatsupportbtn_161fbac84abb26cb426bcf0f5fabff4b_.css">
-  <script defer="" src="./Home_files/track_6a6df2d62afd8d014fdccc6a264c0bfa_.js.download"></script>
+  <!-- <script defer="" src="./Home_files/track_6a6df2d62afd8d014fdccc6a264c0bfa_.js.download"></script> -->
   <script charset="utf-8" src="./Home_files/trusted-types-checker-9b6e874f149cc545c2c2335f8707fd1f.js.download">
   </script>
 </head>
@@ -5872,7 +5872,7 @@
 
               </li>
               <li id="pg600528559798074904" class="wsite-menu-item-wrap  wsite-nav-2" style="position: relative;">
-                <a href="#" class="wsite-menu-item"
+                <a href="./Products.html" class="wsite-menu-item"
                   style="position: relative;">
                   PRODUCTS
                 </a>
@@ -5883,7 +5883,7 @@
               <li class="wsite-menu-item-wrap wsite-nav-cart wsite-nav-7" style="position: relative;">
                 <a href="#" class="wsite-menu-item" id="wsite-nav-cart-a"
                   style="position: relative;" onclick="openCart()">
-                  Cart <span id="wsite-nav-cart-num">0</span>
+                  Cart
                 </a>
               </li>
             </ul>
@@ -5941,7 +5941,7 @@
 
       /* custom */
       .sidecart {
-        height: 97%;
+        height: 100%;
         width: 0;
         position: fixed;
         z-index: 1;
@@ -5950,13 +5950,47 @@
         background-color: #111;
         overflow-x: hidden;
         transition: 0.5s;
-        padding-top: 60px;
       }
 
       .sidecart a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
-        font-size: 25px;
+        font-size: 25px !important;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      #cart_title
+      {
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 25px !important;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      #cart_control
+      {
+        padding-top: 40px;
+      }
+
+      #cart_buttons
+      {
+        text-align: center;
+      }
+
+      .control_btn
+      {
+
+      }
+
+      #cartContent a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 16px !important;
         color: #818181;
         display: block;
         transition: 0.3s;
@@ -5980,19 +6014,80 @@
         .sidecart a {font-size: 18px;}
       }
 
+      .btn-red {
+    color: #fff;
+    background-color: #c24130;
+    border-color:  #c24130;
+
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-green {
+    color: #fff;
+    background-color: #1ea33f;
+    border-color:  #1ea33f;
+
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
       </style>
 
     <div id="mySidenav" class="sidenav">
       <a href="#" onclick="closeNav()">&times;</a>
-      <a href="#">Home</a>
-      <a href="#">Products</a>
+      <a href="./Home.html">Home</a>
+      <a href="./Products.html">Products</a>
       <a href="#" onclick="openCart()">Cart</a>
     </div>
 
     <div id="mySidecart" class="sidecart" >
+      <div id = "cart_control">
       <a href="#" onclick="closeCart()">&times;</a>
-      <a href="#" onclick="clearCart()">Clear All</a>
-      <a href="#">Shopping Cart</a>
+      <div id="cart_title">Shopping Cart</div>
+      <div id='cart_buttons'>
+        <div href="#" class="control_btn btn-red" onclick="clearCart()">Clear All</div>
+        <div href="#" class="control_btn btn-green" onclick="checkoutCart()">Checkout</div>
+      </div>
+    </div>
       <hr>
       <div id = "cartContent">
       </div>
@@ -6016,6 +6111,7 @@
         document.getElementById("mySidecart").style.width = "250px";
         document.getElementById("body").style.marginLeft = "250px";
         document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        //getCart();
       }
 
       function closeCart() {
@@ -6091,7 +6187,7 @@
                             <div class="galleryImageHolder"
                               style="position:relative; width:100%; padding:0 0 75%;overflow:hidden;">
                               <div class="galleryInnerImageHolder"><a
-                                  href="http://www.toolshardwarejamaica.com/tiles.html" title="Tiles"><img
+                                  href="#" title="Tiles"><img
                                     src="./Home_files/4823132.jpg" class="galleryImage" _width="187" _height="250"
                                     style="position:absolute;border:0;width:100%;top:-39.13%;left:0%">
                                   <div class="galleryCaptionHolder fullImageGalleryCaption" style="">
@@ -6113,7 +6209,7 @@
                             <div class="galleryImageHolder"
                               style="position:relative; width:100%; padding:0 0 75%;overflow:hidden;">
                               <div class="galleryInnerImageHolder"><a
-                                  href="http://www.toolshardwarejamaica.com/paints.html" title="Paints"><img
+                                  href="#" title="Paints"><img
                                     src="./Home_files/3473485.jpg" class="galleryImage" _width="400" _height="320"
                                     style="position:absolute;border:0;width:100%;top:-3.33%;left:0%">
                                   <div class="galleryCaptionHolder fullImageGalleryCaption" style="">
@@ -6135,7 +6231,7 @@
                             <div class="galleryImageHolder"
                               style="position:relative; width:100%; padding:0 0 75%;overflow:hidden;">
                               <div class="galleryInnerImageHolder"><a
-                                  href="http://www.toolshardwarejamaica.com/glass-blocks.html" title="Glass Blocks"><img
+                                  href="#" title="Glass Blocks"><img
                                     src="./Home_files/1893697.jpg" class="galleryImage" _width="394" _height="500"
                                     style="position:absolute;border:0;width:100%;top:-34.6%;left:0%">
                                   <div class="galleryCaptionHolder fullImageGalleryCaption" style="">
@@ -6157,7 +6253,7 @@
                             <div class="galleryImageHolder"
                               style="position:relative; width:100%; padding:0 0 75%;overflow:hidden;">
                               <div class="galleryInnerImageHolder"><a
-                                  href="http://www.toolshardwarejamaica.com/faucets.html" title="Faucets"><img
+                                  href="#" title="Faucets"><img
                                     src="./Home_files/260883.png" class="galleryImage" _width="400" _height="677"
                                     style="position:absolute;border:0;width:100%;top:-62.83%;left:0%">
                                   <div class="galleryCaptionHolder fullImageGalleryCaption" style="">
@@ -6179,7 +6275,7 @@
                             <div class="galleryImageHolder"
                               style="position:relative; width:100%; padding:0 0 75%;overflow:hidden;">
                               <div class="galleryInnerImageHolder"><a
-                                  href="http://www.toolshardwarejamaica.com/locks.html" title="Locks"><img
+                                  href="#" title="Locks"><img
                                     src="./Home_files/8897972.jpg" class="galleryImage" _width="397" _height="266"
                                     style="position:absolute;border:0;width:111.94%;top:0%;left:-5.97%">
                                   <div class="galleryCaptionHolder fullImageGalleryCaption" style="">
@@ -6201,7 +6297,7 @@
                             <div class="galleryImageHolder"
                               style="position:relative; width:100%; padding:0 0 75%;overflow:hidden;">
                               <div class="galleryInnerImageHolder"><a
-                                  href="http://www.toolshardwarejamaica.com/lighting.html" title="Lighting"><img
+                                  href="#" title="Lighting"><img
                                     src="./Home_files/1770314.jpg" class="galleryImage" _width="400" _height="400"
                                     style="position:absolute;border:0;width:100%;top:-16.67%;left:0%">
                                   <div class="galleryCaptionHolder fullImageGalleryCaption" style="">
@@ -6223,7 +6319,7 @@
                             <div class="galleryImageHolder"
                               style="position:relative; width:100%; padding:0 0 75%;overflow:hidden;">
                               <div class="galleryInnerImageHolder"><a
-                                  href="http://www.toolshardwarejamaica.com/doors.html" title="Doors"><img
+                                  href="#" title="Doors"><img
                                     src="./Home_files/997238.jpg" class="galleryImage" _width="337" _height="800"
                                     style="position:absolute;border:0;width:100%;top:-108.26%;left:0%">
                                   <div class="galleryCaptionHolder fullImageGalleryCaption" style="">
@@ -6245,7 +6341,7 @@
                             <div class="galleryImageHolder"
                               style="position:relative; width:100%; padding:0 0 75%;overflow:hidden;">
                               <div class="galleryInnerImageHolder"><a
-                                  href="http://www.toolshardwarejamaica.com/bathroom.html" title="Bathroom"><img
+                                  href="#" title="Bathroom"><img
                                     src="./Home_files/8170075.jpg" class="galleryImage" _width="400" _height="263"
                                     style="position:absolute;border:0;width:114.07%;top:0%;left:-7.03%">
                                   <div class="galleryCaptionHolder fullImageGalleryCaption" style="">
@@ -6267,7 +6363,7 @@
                             <div class="galleryImageHolder"
                               style="position:relative; width:100%; padding:0 0 75%;overflow:hidden;">
                               <div class="galleryInnerImageHolder"><a
-                                  href="http://www.toolshardwarejamaica.com/plumbing-supplies.html"
+                                  href="#"
                                   title="Plumbing"><img src="./Home_files/5506070.jpg" class="galleryImage" _width="400"
                                     _height="214" style="position:absolute;border:0;width:140.19%;top:0%;left:-20.09%">
                                   <div class="galleryCaptionHolder fullImageGalleryCaption" style="">
@@ -6312,14 +6408,14 @@
 
 
                         <div class="paragraph" style="text-align:center;">
-                          <font size="3"><a href="http://www.toolshardwarejamaica.com/about-us.html">
+                          <font size="3"><a href="#">
                               <font color="#2a2a2a"><strong>About Us</strong></font>
                             </a><br>
                             <font color="#2a2a2a"><strong>​</strong></font><span><a
-                                href="http://www.toolshardwarejamaica.com/contact-us-old.html">
+                                href="#">
                                 <font color="#2a2a2a"><strong>Contact Us</strong></font>
                               </a></span>
-                          </font><br><a href="http://www.toolshardwarejamaica.com/experience.html">
+                          </font><br><a href="#">
                             <font size="3">
                               <font color="#2a2a2a"><strong>Experience</strong></font>
                             </font>
@@ -6335,19 +6431,19 @@
 
                         <div class="paragraph" style="text-align:center;">
                           <font size="3">
-                            <font color="#2a2a2a"><a href="http://www.toolshardwarejamaica.com/ideas.html">
+                            <font color="#2a2a2a"><a href="#">
                                 <font size="3">
                                   <font color="#2a2a2a"><strong>Ideas</strong></font>
                                 </font>
-                              </a><br><a href="http://www.toolshardwarejamaica.com/locations.html">
+                              </a><br><a href="#">
                                 <font color="#2a2a2a"><strong>Locations</strong></font>
                               </a><br>
                               <font>
-                                <font><a href="http://www.toolshardwarejamaica.com/specials.html">
+                                <font><a href="#">
                                     <font color="#2a2a2a"><strong>Specials​</strong></font>
                                   </a></font>
                               </font>
-                            </font><br><a href="http://www.toolshardwarejamaica.com/products.html">
+                            </font><br><a href="./Products.html">
                               <font color="#2a2a2a"><strong>Products</strong></font>
                             </a>
                           </font>
@@ -6361,19 +6457,19 @@
 
 
                         <div class="paragraph" style="text-align:center;">
-                          <font size="5"><a href="http://www.toolshardwarejamaica.com/">
+                          <font size="5"><a href="#">
                               <font color="#2a2a2a">Tools </font>
                               <font color="#000000">Hardware &amp; Supplies</font>
-                            </a></font><a href="http://www.toolshardwarejamaica.com/ideas.html">
+                            </a></font><a href="#">
                             <font color="#000000">
                               <font size="5">​</font>
                             </font><br>
                             <font size="3" color="#3f3f3f">​</font>
                           </a><span>
-                            <font size="3" color="#3f3f3f">©&nbsp;</font>
+                            <font size="3" color="#3f3f3f"></font>
                           </span><span>
                             <font size="3">
-                              <font color="#3f3f3f">​&nbsp;Copyright 2020 All Rights Reserved</font>
+                              <font color="#3f3f3f">​</font>
                             </font>
                           </span>
                         </div>
@@ -6423,12 +6519,6 @@
                 </table>
               </div>
             </div>
-          </div>
-
-          <div class="paragraph" style="text-align:center;">
-            <font color="#dab844">Website By: </font><a target="_blank" href="http://www.optimumbusinesssolution.com/">
-              <font color="#dab844">Optimum Business Solutions</font>
-            </a>
           </div>
 
           <div>
@@ -6861,17 +6951,6 @@
   </script>
 
 
-  <!-- Stripe Tag -->
-  <script src="./Home_files/saved_resource.js"></script>
-  <script>
-    var stripe = Stripe('');
-  </script><iframe name="__privateStripeController2571" frameborder="0" allowtransparency="true" scrolling="no"
-    allow="payment *" src="./Home_files/controller-56a797504b7ec75ebb641ab447415239.html" aria-hidden="true"
-    tabindex="-1"
-    style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe>
-  <!-- End Stripe tag -->
-
-
 
   <script>
     (function (jQuery) {
@@ -7209,14 +7288,14 @@
     <div id="zbx-modal"></div>
   </div>
   <div data-wzb="SocialMobileTool" data-disabled="false"></div>
-  <div class="zls-sptwndw  zlsps-rht  zls-icosw-1" style="">
+  <!-- <div class="zls-sptwndw  zlsps-rht  zls-icosw-1" style="">
     <div id="zlscht" class="zls-prelative"><em class="zls-minmximg" id="zlscloseimg"
         onclick="Float.closeChat(true)"></em><iframe seamless="" src="./Home_files/drawchat.html" height="417"
         width="100%" id="zlsiframe" style="visibility: visible; overflow: hidden;"
         onload="setTimeout(function(){Float.showIframe(document.getElementById(zlsiframe),onload)},50);"
         frameborder="0" scrolling="no"></iframe></div>
-  </div>
-  <div class="zls-small zls-btnmn zls-btrht " style="display: block;">
+  </div> -->
+  <!-- <div class="zls-small zls-btnmn zls-btrht " style="display: block;">
     <div class="zls-btnsub zls-lftbtn">
       <div id="zls_ctn_wrap" class="zlsf_btmn zlsblue-btn" style="height: 33px;">
         <div class="zls-chtmn" id="zlsimgcont"> <img class="zls-on-L7" id="zlsfltimg" src="./Home_files/spacer.gif"
@@ -7226,7 +7305,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </body>
 
 </html>
