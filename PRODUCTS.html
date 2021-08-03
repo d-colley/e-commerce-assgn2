@@ -274,7 +274,7 @@
       width: 25.00% !important
     }
   </style>
-
+  
   <script type="text/javascript" src="./scripts/cart.js"></script>
   <script src="./Home_files/snowday262.js.download"></script>
   <script type="text/javascript" src="./Home_files/ga.js.download"></script>
@@ -6133,6 +6133,8 @@
       </div>
     </div>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <script>
       function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
@@ -6158,6 +6160,19 @@
         document.getElementById("mySidecart").style.width = "0";
         document.getElementById("body").style.marginLeft = "0";
         document.body.style.backgroundColor = "white";
+      }
+
+      function productSelect()
+      {
+        swal({
+          title: "Success!", 
+          text: "Item has been added to cart", 
+          type: "success"
+        }).then(function()
+        {
+          location.reload();
+        }
+        );
       }
     </script>
 
@@ -6188,7 +6203,7 @@
                           style="position:relative;margin:5px;padding:0 14px 14px 0">
                           <div class="galleryImageHolder" style="position:relative; width:100%; padding:0 0 75.08%;">
                             <div class="galleryInnerImageHolder"><a
-                                href="http://www.toolshardwarejamaica.com/kitchen.html"><img
+                                href="#"><img
                                   src="./img/kitchen_sink.jpg" class="galleryImage galleryImageBorder" _width="333"
                                   _height="220"
                                   style="position:absolute;border-width:1px;padding:6px;width:100%;top:0%;left:0%;"></a>
@@ -6207,7 +6222,7 @@
                           style="position:relative;margin:5px;padding:0 14px 14px 0">
                           <div class="galleryImageHolder" style="position:relative; width:100%; padding:0 0 75.08%;">
                             <div class="galleryInnerImageHolder"><a
-                                href="http://www.toolshardwarejamaica.com/tiles.html"><img
+                                href="#"><img
                                   src="./img/shower_cabin-Copy.jpg" class="galleryImage galleryImageBorder" _width="333"
                                   _height="220"
                                   style="position:absolute;border-width:1px;padding:6px;width:100%;height:101%;top:0%;left:0%"></a>
@@ -6225,7 +6240,7 @@
                           style="position:relative;margin:5px;padding:0 14px 14px 0">
                           <div class="galleryImageHolder" style="position:relative; width:100%; padding:0 0 75.08%;">
                             <div class="galleryInnerImageHolder"><a
-                                href="http://www.toolshardwarejamaica.com/bathroom.html"><img src="./img/door_lock.jpg"
+                                href="#"><img src="./img/door_lock.jpg"
                                   class="galleryImage galleryImageBorder" _width="333" _height="238"
                                   style="position:absolute;border-width:1px;padding:6px;width:100%;height:101%;top:0%;left:0%"></a>
                             </div>
@@ -6243,7 +6258,7 @@
                           style="position:relative;margin:5px;padding:0 14px 14px 0">
                           <div class="galleryImageHolder" style="position:relative; width:100%; padding:0 0 75.08%;">
                             <div class="galleryInnerImageHolder"><a
-                                href="http://www.toolshardwarejamaica.com/glass-blocks.html"><img
+                                href="#"><img
                                   src="./img/jacuzzi.jpg" class="galleryImage galleryImageBorder" _width="333"
                                   _height="248"
                                   style="position:absolute;border-width:1px;padding:6px;width:100%;height:101%;top:0%;left:0%"></a>
@@ -6262,7 +6277,7 @@
                           style="position:relative;margin:5px;padding:0 14px 14px 0">
                           <div class="galleryImageHolder" style="position:relative; width:100%; padding:0 0 75.08%;">
                             <div class="galleryInnerImageHolder"><a
-                                href="http://www.toolshardwarejamaica.com/doors.html"><img src="./img/light_fixture.jpg"
+                                href="#"><img src="./img/light_fixture.jpg"
                                   class="galleryImage galleryImageBorder" _width="236" _height="250"
                                   style="position:absolute;border-width:1px;padding:6px;width:100%;height:101%;top:0%;left:0%"></a>
                             </div>
@@ -6279,7 +6294,7 @@
                           style="position:relative;margin:5px;padding:0 14px 14px 0">
                           <div class="galleryImageHolder" style="position:relative; width:100%; padding:0 0 75.08%;">
                             <div class="galleryInnerImageHolder"><a
-                                href="http://www.toolshardwarejamaica.com/paints.html"><img src="./img/wood_door.jpg"
+                                href="#"><img src="./img/wood_door.jpg"
                                   class="galleryImage galleryImageBorder" _width="327" _height="250"
                                   style="position:absolute;border-width:1px;padding:6px;width:100%;height:101%;top:0%;left:0%"></a>
                             </div>

@@ -54,7 +54,8 @@ function addItemToCart(choice)
     localStorage.setItem("allItems", JSON.stringify(existingItems));
     //var stringified = JSON.stringify(item);
     //localStorage.setItem(totalCart, stringified);
-    location.reload();
+    productSelect();
+    //setTimeout(function(){ location.reload(); }, 3000);
 
 }
 
